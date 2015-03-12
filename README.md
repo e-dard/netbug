@@ -9,7 +9,7 @@ The advantages of using `rdb` over the existing `/net/http/pprof` handlers are:
  3. You can register the handlers onto `http.ServeMux`'s that aren't `http.DefaultServeMux`.
 
 **Note**:
-It still imports `/net/http/pprof`, which means the `/debug/pprof` routes in that package get registered on `http.DefaultServeMux`. If you're using this package you to avoid those routes being registered, you should use it with your own `http.ServeMux`.
+It still imports `/net/http/pprof`, which means the `/debug/pprof` routes in that package get registered on `http.DefaultServeMux`. If you're using this package to avoid those routes being registered, you should use it with your own `http.ServeMux`.
 
 `rdb` is trying to cater for the situation where you want all profiling tools available remotely on your running services, but you don't want to expose the `/debug/pprof` routes that `net/http/pprof` forces you to expose.
 
