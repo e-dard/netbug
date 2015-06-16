@@ -94,5 +94,5 @@ You can sort of fix (1) and (2) by digging around the `net/http/pprof` package a
 It doesn't really work well.
 Also, the index page doesn't provide you with easy links to the debug information that the `net/http/pprof` package has handlers for.
 
-`netdebug` is just a small package to fix these issues.
+`netbug` is just a small package to fix these issues.
 
