@@ -32,7 +32,7 @@ import (
 
 func main() {
 	r := http.NewServeMux()
-	rdb.RegisterHandler("/myroute/", r)
+	netbug.RegisterHandler("/myroute/", r)
 	if err := http.ListenAndServe(":8080", r); err != nil {
 		log.Fatal(err)
 	}
@@ -57,7 +57,7 @@ import (
 
 func main() {
 	r := http.NewServeMux()
-	rdb.RegisterAuthHandler("password", "/myroute/", r)
+	netbug.RegisterAuthHandler("password", "/myroute/", r)
 	if err := http.ListenAndServe(":8080", r); err != nil {
 		log.Fatal(err)
 	}
