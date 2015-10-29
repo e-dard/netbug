@@ -41,7 +41,7 @@ func main() {
 
 Visiting [http://localhost:8080/myroute/](http://localhost:8080/myroute/) will then return:
 
-![](http://f.cl.ly/items/2d13110V2S2H3T1c0n3b/Screen%20Shot%202015-03-19%20at%2017.22.19.png)
+![](https://photos-6.dropbox.com/t/2/AAD-NOjqUVH6yKuSAR2sA07VQTQPeVAGCtqEhY-McVehRQ/12/5033766/png/32x32/1/_/1/2/Screen%20Shot%202015-10-29%20at%2017.01.45.png/ENyv4gMYlvYWIAcoBw/vaSYDZEeuTA-8biklDyYORywwvL9SbVYH41Jff_CuBk?size=1600x1200&size_mode=2)
 
 `netbug` also provides a simple way of adding some authentication:
 
@@ -78,6 +78,17 @@ As an example though, if you want to run a 30-second CPU profile on your running
 ```
 $ go tool pprof https://example.com/myroute/profile
 ```
+
+##### New in Go 1.5
+You can now produce [execution traces](https://golang.org/pkg/runtime/trace/) of your remotely running program using netbug.
+
+To do this run one of the trace profiles, which will result in a file being downloaded. Then use the Go `trace` tool to generate a trace, which will open up in your browser.
+
+```
+$ go tool trace binary-being-profiled /path/to/downloaded/trace
+```
+
+When compiling `binary-being-profiled`, you will need to have targeted the same architecture as the binary that generated the profile.
 
 ## Background
 The [net/http/pprof](http://golang.org/pkg/net/http/pprof/) package is great.

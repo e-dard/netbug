@@ -33,6 +33,8 @@ func handler(token string) http.Handler {
 			nhpprof.Cmdline(w, r)
 		case "profile":
 			nhpprof.Profile(w, r)
+		case "trace":
+			nhpprof.Trace(w, r)
 		case "symbol":
 			nhpprof.Symbol(w, r)
 		default:
@@ -125,6 +127,8 @@ var indexTmpl = template.Must(template.New("index").Parse(`<html>
       <tr><td align=right>{{.Count}}<td><a href="{{.Name}}?debug=1{{if $.Token}}&token={{$.Token}}{{end}}">{{.Name}}</a>
     {{end}}
     <tr><td align=right><td><a href="profile{{if .Token}}?token={{.Token}}{{end}}">CPU</a>
+    <tr><td align=right><td><a href="trace?seconds=5{{if .Token}}&token={{.Token}}{{end}}">5-second trace</a>
+    <tr><td align=right><td><a href="trace?seconds=30{{if .Token}}&token={{.Token}}{{end}}">30-second trace</a>
     </table>
     <br>
     debug information:<br>
