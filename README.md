@@ -41,7 +41,7 @@ func main() {
 
 Visiting [http://localhost:8080/myroute/](http://localhost:8080/myroute/) will then return:
 
-![](https://photos-6.dropbox.com/t/2/AAD-NOjqUVH6yKuSAR2sA07VQTQPeVAGCtqEhY-McVehRQ/12/5033766/png/32x32/1/_/1/2/Screen%20Shot%202015-10-29%20at%2017.01.45.png/ENyv4gMYlvYWIAcoBw/vaSYDZEeuTA-8biklDyYORywwvL9SbVYH41Jff_CuBk?size=1600x1200&size_mode=2)
+![](https://photos-3.dropbox.com/t/2/AABdAn1yRTBvqXeDJygtCRsMu1HMqTohoIJdWAQ7vH_j_g/12/5033766/png/32x32/1/1446145200/0/2/Screen%20Shot%202015-10-29%20at%2017.01.45.png/CKaeswIgASACIAMgBSAHKAEoAigH/vaSYDZEeuTA-8biklDyYORywwvL9SbVYH41Jff_CuBk?size_mode=5)
 
 `netbug` also provides a simple way of adding some authentication:
 
